@@ -1,0 +1,29 @@
+{
+  "name": "tenenger7125-npm-publish-babel",
+  "version": "0.0.1",
+  "description": "npm publish test",
+  "main": "src/index.js",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs"
+    }
+  },
+  "author": "tenenger7125",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "tenenger7125-npm-publish-babel": "^0.0.1"
+  }
+}

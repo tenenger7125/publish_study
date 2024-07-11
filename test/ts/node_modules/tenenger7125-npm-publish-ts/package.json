@@ -1,0 +1,29 @@
+{
+  "name": "tenenger7125-npm-publish-ts",
+  "version": "0.0.5",
+  "description": "npm publish test",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json && node scripts/rename.cjs",
+    "build:esm": "tsc --project tsconfig.esm.json"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "author": "tenenger7125",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "tenenger7125-npm-publish-ts": "^0.0.4",
+    "typescript": "^5.5.3"
+  }
+}

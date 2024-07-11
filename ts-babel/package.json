@@ -1,0 +1,27 @@
+{
+  "name": "tenenger7125-npm-publish-ts-babel",
+  "version": "0.0.4",
+  "description": "npm publish test",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run types:check && npm run build:clean && babel -d dist/ --extensions \".ts\" src",
+    "build:clean": "rm -rf dist",
+    "types:check": "tsc --noEmit"
+  },
+  "author": "tenenger7125",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/node": "^20.14.10",
+    "tenenger7125-npm-publish-ts": "^0.0.5",
+    "typescript": "^5.5.3"
+  }
+}

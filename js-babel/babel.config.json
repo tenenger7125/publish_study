@@ -1,0 +1,6 @@
+{
+  "presets": [
+    ["@babel/preset-env"] // commonjs transpile
+    // ["@babel/preset-env", {"modules": false}] // ES6 transpile
+  ]
+}
