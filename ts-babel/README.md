@@ -12,3 +12,20 @@ Print 'Hello, npm!' in the console.
 
 ### 트리셰이킹
 - Babel은 Webpack과 같은 번들러와 함께 사용하면 트리 셰이킹을 지원하여 사용되지 않는 코드를 제거하고 번들 크기를 줄일 수 있습니다.
+
+## 알게된 점
+### 타입스크립트와 바벨을 함께 사용하면 더 편하다.
+- 타입스크립트 명령어로는 d.ts 파일을 생성하고, 바벨의 경우에는 오로지 빌드만 했기 때문에 빠른 빌드가 가능하다.
+
+## 오류
+### babel.config.js 파일과 ECMAScript
+- `package.json`에 type을 module로 했고 build를 진행했을 때 특정 파일에서 CommonJs를 쓰고 있으니 ECMAScript를 써야한다는 오류가 나왔다.
+- 처음에는 빌드할 파일에 문제가 있는 줄 알았는데, 알고보니 `babel.config.js`이 module.exports 를 사용하고 있어서 오류가 발생했다.
+- `babel.config.js`파일을 export default로 내보내거나, `babel.config.json` 파일로 변경해서 사용해서 해결할 수 있다.
+
+### dist/index.js가 dist/main.js를 읽어오지 못한다.
+- `tsconfig.json` 파일에서 상대 경로 및 확장자를 생략하는 속성을 추가했다.(baseUrl) 
+- 그리고 `babel.config.js` 파일에서 상대 경로 및 타게팅 파일 확장자 속성을 가진 플러그인을 추가했다.(module.resolver)
+- 배포를 했더니 트랜스파일링된 `dist/index.js`가 `dist/main.js`를 읽어오지 못한다는 오류가 발생했다.
+- 알고보니 typescript는 javascript를 따르기 때문에 기존 자바스크립트 처럼 확장자를 붙여야 한다고 한다.
+- https://github.com/microsoft/TypeScript/issues/42151

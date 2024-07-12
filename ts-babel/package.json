@@ -1,6 +1,6 @@
 {
-  "name": "tenenger7125-npm-publish-ts-babel",
-  "version": "0.0.16",
+  "name": "tenenger7125-npm-publish-ts-babel-test",
+  "version": "0.0.12",
   "description": "npm publish test",
   "type": "module",
   "private": false,
@@ -13,7 +13,7 @@
     "build": "npm run build:clean && npm run build:babel && npm run build:types",
     "build:babel": "babel src --out-dir dist --extensions \".ts\"",
     "build:clean": "rm -rf dist",
-    "build:types": "tsc --project tsconfig.json",
+    "build:types": "tsc",
     "publish:cascade": "npm run build && npm version patch && npm publish"
   },
   "author": "tenenger7125",
@@ -25,7 +25,8 @@
     "@babel/preset-typescript": "^7.24.7",
     "@types/node": "^20.14.10",
     "babel-plugin-module-resolver": "^5.0.2",
-    "tenenger7125-npm-publish-ts-babel": "^0.0.16",
+    "dist": "^0.1.2",
+    "tenenger7125-npm-publish-ts-babel-test": "^0.0.12",
     "typescript": "^5.5.3"
   }
 }
