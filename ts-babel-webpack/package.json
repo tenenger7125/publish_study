@@ -1,6 +1,6 @@
 {
   "name": "tenenger7125-npm-publish-ts-babel-webpack",
-  "version": "0.0.7",
+  "version": "0.0.12",
   "description": "npm publish test",
   "type": "module",
   "private": false,
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish:cascade": "npm run build && npm version patch && npm publish"
+    "webpack": "webpack"
   },
   "author": "tenenger7125",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "babel-plugin-module-resolver": "^5.0.2",
     "esbuild-loader": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
-    "tenenger7125-npm-publish-ts-babel-webpack": "^0.0.7",
+    "tenenger7125-npm-publish-ts-babel-webpack": "^0.0.12",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.3",
     "webpack": "^5.93.0",

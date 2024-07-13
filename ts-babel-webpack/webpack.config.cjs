@@ -7,7 +7,11 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "bundle.js",
+    libraryTarget: 'module',
     clean: true,
+  },
+  experiments: {
+    outputModule: true
   },
   module: {
     rules: [
@@ -43,7 +47,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
-			"@": path.resolve(__dirname, "./src/"),
+			"@": path.resolve(__dirname, "./src"),
 		}
   },
 };
