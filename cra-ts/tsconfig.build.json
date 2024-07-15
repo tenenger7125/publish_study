@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/hooks"],
+  "exclude": ["**/jest.setup.ts", "**/*.test.*", "**/*.spec.*", "**/*.stories.*", "**/__storybook__/*"],
+}

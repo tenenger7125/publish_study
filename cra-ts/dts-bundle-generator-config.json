@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "filePath": "./src/hooks/index.ts",
+      "outFile": "./lib/index.d.ts",
+      "output": {
+        "sortNodes": true,
+        "noBanner": true,
+        "respectPreserveConstEnum": true,
+        "exportReferencedTypes": true
+      }
+    }
+  ],
+  "compilationOptions": {
+    "preferredConfigPath": "./tsconfig.build.json"
+  }
+}
