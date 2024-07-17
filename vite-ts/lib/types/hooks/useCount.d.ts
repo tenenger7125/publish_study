@@ -4,10 +4,4 @@ declare const useCount: (initialCount?: number) => {
     decrement: () => void;
     reset: () => void;
 };
-
-declare const useMap: () => {
-    map: Map<string, string>;
-    set: (key: string, value: string) => void;
-};
-
-export { useCount, useMap };
+export default useCount;
